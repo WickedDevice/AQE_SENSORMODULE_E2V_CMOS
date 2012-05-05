@@ -1700,11 +1700,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10 kOhm"/>
 <part name="P+2" library="SparkFun" deviceset="VCC" device=""/>
-<part name="U$1" library="wicked-device" deviceset="ABLS" device=""/>
+<part name="XT1" library="wicked-device" deviceset="ABLS" device=""/>
 <part name="C1" library="SparkFun" deviceset="CAP" device="0603-CAP"/>
 <part name="C2" library="SparkFun" deviceset="CAP" device="0603-CAP"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
-<part name="U$2" library="wicked-device" deviceset="LD1117XX" device=""/>
+<part name="U1" library="wicked-device" deviceset="LD1117XX" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
 <part name="U$3" library="SparkFun" deviceset="1.8V" device=""/>
@@ -1748,11 +1748,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="SUPPLY1" gate="GND" x="186.69" y="179.07"/>
 <instance part="R1" gate="G$1" x="254" y="229.87" rot="R90"/>
 <instance part="P+2" gate="1" x="254" y="240.03"/>
-<instance part="U$1" gate="G$1" x="353.06" y="210.82" rot="R90"/>
+<instance part="XT1" gate="G$1" x="353.06" y="210.82" rot="R90"/>
 <instance part="C1" gate="G$1" x="337.82" y="199.39"/>
 <instance part="C2" gate="G$1" x="345.44" y="199.39"/>
 <instance part="SUPPLY2" gate="GND" x="341.63" y="193.04"/>
-<instance part="U$2" gate="G$1" x="95.25" y="187.96"/>
+<instance part="U1" gate="G$1" x="95.25" y="187.96"/>
 <instance part="SUPPLY3" gate="GND" x="95.25" y="162.56"/>
 <instance part="P+3" gate="1" x="68.58" y="210.82"/>
 <instance part="U$3" gate="G$1" x="123.19" y="209.55"/>
@@ -1790,7 +1790,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="254" y1="240.03" x2="254" y2="234.95" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="VI"/>
+<pinref part="U1" gate="G$1" pin="VI"/>
 <wire x1="82.55" y1="187.96" x2="68.58" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="VCC"/>
 <wire x1="68.58" y1="210.82" x2="68.58" y2="203.2" width="0.1524" layer="91"/>
@@ -1833,7 +1833,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="341.63" y="195.58"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="95.25" y1="177.8" x2="95.25" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -1887,7 +1887,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="XTAL1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
+<pinref part="XT1" gate="G$1" pin="P$2"/>
 <wire x1="332.74" y1="215.9" x2="345.44" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="345.44" y1="215.9" x2="353.06" y2="215.9" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -1903,7 +1903,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="XTAL2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="P$1"/>
+<pinref part="XT1" gate="G$1" pin="P$1"/>
 <wire x1="332.74" y1="205.74" x2="337.82" y2="205.74" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="337.82" y1="205.74" x2="353.06" y2="205.74" width="0.1524" layer="91"/>
@@ -2014,7 +2014,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="1.8V" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="VO"/>
+<pinref part="U1" gate="G$1" pin="VO"/>
 <wire x1="107.95" y1="187.96" x2="123.19" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="1.8V"/>
 <wire x1="123.19" y1="209.55" x2="123.19" y2="203.2" width="0.1524" layer="91"/>
