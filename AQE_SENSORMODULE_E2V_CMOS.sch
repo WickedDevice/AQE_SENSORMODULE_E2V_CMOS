@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1604,11 +1604,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <pad name="FIGSIG/E2VH+" x="-1.8" y="1.8" drill="0.62" diameter="1.3"/>
 <pad name="FIGV+/E2V-" x="1.8" y="-1.8" drill="0.62" diameter="1.3"/>
 <pad name="FIGV+/E2VSIG" x="-1.8" y="-1.8" drill="0.62" diameter="1.3"/>
-<text x="-3.6" y="5.4" size="1.27" layer="21">FIG/CDI</text>
-<text x="1.27" y="-3.81" size="1.27" layer="21">F+/e-</text>
-<text x="1.27" y="2.54" size="1.27" layer="21">F-/eS+</text>
-<text x="-6.35" y="-3.81" size="1.27" layer="21">F+/eS-</text>
-<text x="-6.35" y="2.54" size="1.27" layer="21">F-/e+</text>
+<text x="-2.159" y="4.445" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<text x="-3.2258" y="3.3782" size="0.8128" layer="25" font="vector" rot="R180">H+</text>
+<text x="4.572" y="3.81" size="0.8128" layer="25" font="vector" rot="R180">S+</text>
+<text x="4.6228" y="-2.8829" size="0.8128" layer="25" font="vector" rot="R180">H-</text>
+<text x="-3.3147" y="-2.8194" size="0.8128" layer="25" font="vector" rot="R180">S-</text>
 </package>
 </packages>
 <symbols>
@@ -1852,8 +1852,8 @@ reflow soldering</description>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="P+6" library="SparkFun" deviceset="VCC" device=""/>
 <part name="C6" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
-<part name="R4" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="150Ohm"/>
-<part name="R5" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="330Ohm"/>
+<part name="R4" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.4MOhm"/>
+<part name="R5" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.2MOhm"/>
 <part name="C7" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="U1" library="SparkFun" deviceset="V_REG_LDO" device="SMD"/>
@@ -1866,8 +1866,8 @@ reflow soldering</description>
 <part name="C8" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="C9" library="wicked-device" deviceset="EEE-1EA100WR" device="" value="10uF"/>
 <part name="R9" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="0Ohm"/>
-<part name="R7" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="150Ohm"/>
-<part name="R8" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="330Ohm"/>
+<part name="R7" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.4MOhm"/>
+<part name="R8" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.2MOhm"/>
 <part name="U2" library="SparkFun" deviceset="V_REG_LDO" device="SMD"/>
 <part name="JP1" library="SparkFun" deviceset="STAND-OFF" device=""/>
 <part name="JP2" library="SparkFun" deviceset="STAND-OFF" device=""/>
@@ -1885,24 +1885,26 @@ reflow soldering</description>
 <wire x1="152.4" y1="7.62" x2="152.4" y2="266.7" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="152.4" y1="266.7" x2="40.64" y2="266.7" width="0.1524" layer="94" style="shortdash"/>
 <text x="67.31" y="267.97" size="1.778" layer="91">sensor specific</text>
-<text x="80.01" y="252.73" size="1.778" layer="91">bypass option for regulator</text>
+<text x="80.01" y="257.81" size="1.778" layer="91">bypass option for regulator</text>
 <text x="271.78" y="90.17" size="1.778" layer="91">programming header</text>
 <text x="76.2" y="12.7" size="1.778" layer="91">resistor values are sensor dependent</text>
 <text x="161.925" y="194.945" size="1.778" layer="91">locate near VCC pin</text>
 <text x="180.34" y="88.9" size="1.778" layer="91">MAC/EEPROM Chip (for ID and possibly Calibration Data)</text>
 <text x="158.75" y="120.65" size="1.778" layer="91">locate near VCC pin</text>
 <text x="124.46" y="207.01" size="1.778" layer="96">10uF</text>
-<text x="81.28" y="177.8" size="1.778" layer="91">resistor values are for 1.82v</text>
+<text x="81.28" y="177.8" size="1.778" layer="91">resistor values are for 2.3V</text>
 <text x="267.97" y="181.61" size="1.778" layer="91">locate near AREF pin</text>
 <text x="81.28" y="97.79" size="1.778" layer="91">power regulation for sensor</text>
-<text x="80.01" y="168.91" size="1.778" layer="91">bypass option for regulator</text>
+<text x="80.01" y="171.45" size="1.778" layer="91">bypass option for regulator</text>
 <text x="124.46" y="123.19" size="1.778" layer="96">10uF</text>
-<text x="81.28" y="93.98" size="1.778" layer="91">resistor values are for 1.82v</text>
+<text x="81.28" y="93.98" size="1.778" layer="91">resistor values are for 2.3V</text>
 <text x="45.085" y="206.375" size="1.778" layer="91">locate near IN pin</text>
 <text x="128.905" y="205.105" size="1.778" layer="91">locate near OUT pin</text>
 <text x="43.815" y="122.555" size="1.778" layer="91">locate near IN pin</text>
 <text x="128.905" y="121.285" size="1.778" layer="91">locate near OUT pin</text>
 <text x="359.41" y="146.685" size="1.778" layer="91">standoffs</text>
+<text x="74.93" y="255.27" size="1.778" layer="91">if populated, HEATER_VCC == VCC</text>
+<text x="74.93" y="168.91" size="1.778" layer="91">if populated, SENSOR_VCC == VCC</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
