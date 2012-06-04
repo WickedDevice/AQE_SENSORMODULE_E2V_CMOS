@@ -3152,10 +3152,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="U2" library="SparkFun" deviceset="V_REG_LDO" device="SMD"/>
 <part name="JP1" library="SparkFun" deviceset="STAND-OFF" device=""/>
 <part name="JP2" library="SparkFun" deviceset="STAND-OFF" device=""/>
-<part name="STATUS" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
+<part name="INFO" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
 <part name="R10" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="270ohm"/>
-<part name="P+8" library="SparkFun" deviceset="VCC" device=""/>
-<part name="POWER" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="RED"/>
+<part name="PWR" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="R11" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="470ohm"/>
 <part name="MCU" library="axeio-SparkFun" deviceset="ATTINY48" device="32A"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
@@ -3166,6 +3165,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="C2" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="P+9" library="SparkFun" deviceset="VCC" device=""/>
+<part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3260,10 +3260,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 </instance>
 <instance part="JP1" gate="G$1" x="281.94" y="143.51"/>
 <instance part="JP2" gate="G$1" x="289.56" y="143.51"/>
-<instance part="STATUS" gate="G$1" x="215.9" y="50.8" rot="R90"/>
+<instance part="INFO" gate="G$1" x="215.9" y="50.8" rot="R90"/>
 <instance part="R10" gate="G$1" x="200.66" y="50.8" rot="R180"/>
-<instance part="P+8" gate="1" x="185.42" y="55.88"/>
-<instance part="POWER" gate="G$1" x="215.9" y="35.56" rot="R90"/>
+<instance part="PWR" gate="G$1" x="215.9" y="35.56" rot="R90"/>
 <instance part="R11" gate="G$1" x="200.66" y="35.56" rot="R180"/>
 <instance part="MCU" gate="G$1" x="228.6" y="223.52"/>
 <instance part="SUPPLY2" gate="GND" x="172.72" y="173.99"/>
@@ -3274,6 +3273,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="C2" gate="G$1" x="358.14" y="196.85"/>
 <instance part="SUPPLY8" gate="GND" x="358.14" y="176.53"/>
 <instance part="P+9" gate="1" x="358.14" y="223.52"/>
+<instance part="SUPPLY10" gate="GND" x="233.68" y="26.67"/>
 </instances>
 <busses>
 </busses>
@@ -3348,16 +3348,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="95.25" y1="153.035" x2="68.58" y2="153.035" width="0.1524" layer="91"/>
 <junction x="95.25" y="153.035"/>
 <junction x="68.58" y="153.035"/>
-</segment>
-<segment>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="50.8" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="50.8" x2="185.42" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="P+8" gate="1" pin="VCC"/>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="35.56" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="35.56" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
-<junction x="185.42" y="50.8"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -3473,6 +3463,16 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="402.59" y1="186.69" x2="358.14" y2="186.69" width="0.1524" layer="91"/>
 <junction x="358.14" y="186.69"/>
 </segment>
+<segment>
+<pinref part="INFO" gate="G$1" pin="C"/>
+<wire x1="220.98" y1="50.8" x2="233.68" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="50.8" x2="233.68" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="PWR" gate="G$1" pin="C"/>
+<wire x1="233.68" y1="35.56" x2="220.98" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="35.56" x2="233.68" y2="29.21" width="0.1524" layer="91"/>
+<junction x="233.68" y="35.56"/>
+<pinref part="SUPPLY10" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="/RESET" class="0">
 <segment>
@@ -3501,14 +3501,15 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="116.84" y="58.42" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="288.29" y1="172.72" x2="304.8" y2="172.72" width="0.1524" layer="91"/>
-<label x="304.8" y="172.72" size="1.778" layer="95" xref="yes"/>
+<wire x1="271.78" y1="190.5" x2="293.37" y2="190.5" width="0.1524" layer="91"/>
+<label x="293.37" y="190.5" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PC7(PCINT15)"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
-<wire x1="271.78" y1="195.58" x2="317.5" y2="195.58" width="0.1524" layer="91"/>
-<label x="317.5" y="195.58" size="1.778" layer="95" xref="yes"/>
+<wire x1="271.78" y1="195.58" x2="293.37" y2="195.58" width="0.1524" layer="91"/>
+<label x="293.37" y="195.58" size="1.778" layer="95" xref="yes"/>
 <pinref part="MCU" gate="G$1" pin="PC4(ADC4/SDA/PCINT12)"/>
 </segment>
 <segment>
@@ -3540,14 +3541,18 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="116.84" y="41.91" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="288.29" y1="167.64" x2="304.8" y2="167.64" width="0.1524" layer="91"/>
-<label x="304.8" y="167.64" size="1.778" layer="95" xref="yes"/>
+<label x="308.61" y="241.3" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PA0(ADC6/PCINT24)"/>
+<wire x1="308.61" y1="241.3" x2="271.78" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MAC_IO" class="0">
 <segment>
-<wire x1="288.29" y1="170.18" x2="317.5" y2="170.18" width="0.1524" layer="91"/>
-<label x="317.5" y="170.18" size="1.778" layer="95" xref="yes"/>
+<wire x1="275.59" y1="200.66" x2="293.37" y2="200.66" width="0.1524" layer="91"/>
+<label x="293.37" y="200.66" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PC2(ADC2/PCINT10)"/>
+<wire x1="271.78" y1="200.66" x2="274.32" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="274.32" y1="200.66" x2="275.59" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="MAC" gate="I1" pin="SCIO"/>
@@ -3666,26 +3671,27 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="STATUS" class="0">
 <segment>
-<wire x1="288.29" y1="213.36" x2="308.61" y2="213.36" width="0.1524" layer="91"/>
-<label x="308.61" y="213.36" size="1.778" layer="95" xref="yes"/>
+<label x="293.37" y="226.06" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PB1(PCINT1/OC1A)"/>
+<wire x1="293.37" y1="226.06" x2="271.78" y2="226.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="STATUS" gate="G$1" pin="C"/>
-<wire x1="220.98" y1="50.8" x2="231.14" y2="50.8" width="0.1524" layer="91"/>
-<label x="231.14" y="50.8" size="1.778" layer="95" xref="yes"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="195.58" y1="50.8" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
+<label x="185.42" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
-<pinref part="STATUS" gate="G$1" pin="A"/>
+<pinref part="INFO" gate="G$1" pin="A"/>
 <wire x1="205.74" y1="50.8" x2="213.36" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="POWER" gate="G$1" pin="A"/>
+<pinref part="PWR" gate="G$1" pin="A"/>
 <wire x1="205.74" y1="35.56" x2="213.36" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -3702,126 +3708,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="179.07" y="228.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PA0(ADC6/PCINT24)"/>
-<wire x1="271.78" y1="241.3" x2="275.59" y2="241.3" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PA1(ADC7/PCINT25)"/>
-<wire x1="271.78" y1="238.76" x2="275.59" y2="238.76" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PA2(PCINT26)"/>
-<wire x1="271.78" y1="236.22" x2="275.59" y2="236.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PA3(PCINT27)"/>
-<wire x1="271.78" y1="233.68" x2="275.59" y2="233.68" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PB0(PCINT0/CLK0/ICP1)"/>
-<wire x1="271.78" y1="228.6" x2="275.59" y2="228.6" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PB1(PCINT1/OC1A)"/>
-<wire x1="271.78" y1="226.06" x2="275.59" y2="226.06" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PB2(PCINT2/SS/OC1B)"/>
-<wire x1="271.78" y1="223.52" x2="275.59" y2="223.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PB6(PCINT6/CLKI)"/>
-<wire x1="271.78" y1="213.36" x2="275.59" y2="213.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PB7(PCINT7)"/>
-<wire x1="271.78" y1="210.82" x2="275.59" y2="210.82" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PC2(ADC2/PCINT10)"/>
-<wire x1="271.78" y1="200.66" x2="275.59" y2="200.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PC3(ADC3/PCINT11)"/>
-<wire x1="271.78" y1="198.12" x2="275.59" y2="198.12" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PC7(PCINT15)"/>
-<wire x1="271.78" y1="190.5" x2="275.59" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD0(PCINT16)"/>
-<wire x1="271.78" y1="185.42" x2="275.59" y2="185.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD1(PCINT17)"/>
-<wire x1="271.78" y1="182.88" x2="275.59" y2="182.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$26" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD2(INT0/PCINT18)"/>
-<wire x1="271.78" y1="180.34" x2="275.59" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD3(INT1/PCINT19)"/>
-<wire x1="271.78" y1="177.8" x2="275.59" y2="177.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD4(PCINT20/T0)"/>
-<wire x1="271.78" y1="175.26" x2="275.59" y2="175.26" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD5(PCINT21/T1)"/>
-<wire x1="271.78" y1="172.72" x2="275.59" y2="172.72" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$30" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD6(PCINT22/AIN0)"/>
-<wire x1="271.78" y1="170.18" x2="275.59" y2="170.18" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$31" class="0">
-<segment>
-<pinref part="MCU" gate="G$1" pin="PD7(PCINT23/AIN1)"/>
-<wire x1="271.78" y1="167.64" x2="275.59" y2="167.64" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="MOSI" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="4"/>
@@ -3830,8 +3716,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="PB3(PCINT3/MOSI)"/>
-<wire x1="271.78" y1="220.98" x2="295.91" y2="220.98" width="0.1524" layer="91"/>
-<label x="295.91" y="220.98" size="1.778" layer="95" xref="yes"/>
+<wire x1="271.78" y1="220.98" x2="293.37" y2="220.98" width="0.1524" layer="91"/>
+<label x="293.37" y="220.98" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="DI"/>
@@ -3847,8 +3733,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="PB5(SCK/PCINT5)"/>
-<wire x1="271.78" y1="215.9" x2="295.91" y2="215.9" width="0.1524" layer="91"/>
-<label x="295.91" y="215.9" size="1.778" layer="95" xref="yes"/>
+<wire x1="271.78" y1="215.9" x2="293.37" y2="215.9" width="0.1524" layer="91"/>
+<label x="293.37" y="215.9" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="SCK"/>
@@ -3875,13 +3761,14 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="POWER" class="0">
 <segment>
-<pinref part="POWER" gate="G$1" pin="C"/>
-<wire x1="220.98" y1="35.56" x2="231.14" y2="35.56" width="0.1524" layer="91"/>
-<label x="231.14" y="35.56" size="1.778" layer="95" xref="yes"/>
+<label x="308.61" y="223.52" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PB2(PCINT2/SS/OC1B)"/>
+<wire x1="308.61" y1="223.52" x2="271.78" y2="223.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="288.29" y1="210.82" x2="293.37" y2="210.82" width="0.1524" layer="91"/>
-<label x="293.37" y="210.82" size="1.778" layer="95" xref="yes"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="195.58" y1="35.56" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
+<label x="185.42" y="35.56" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="/POT_CS" class="0">
