@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5504,7 +5504,6 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="U$2" library="wicked-device" deviceset="PLANE_COUPLER" device=""/>
 <part name="U$3" library="wicked-device" deviceset="PLANE_COUPLER" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
-<part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5620,7 +5619,6 @@ Source: VISHAY wscwsn.pdf</description>
 <instance part="U$2" gate="G$1" x="342.9" y="58.42"/>
 <instance part="U$3" gate="G$1" x="342.9" y="46.99"/>
 <instance part="SUPPLY4" gate="GND" x="327.66" y="41.91"/>
-<instance part="SUPPLY5" gate="GND" x="95.25" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -5807,16 +5805,6 @@ Source: VISHAY wscwsn.pdf</description>
 <wire x1="337.82" y1="46.99" x2="327.66" y2="46.99" width="0.1524" layer="91"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <wire x1="327.66" y1="46.99" x2="327.66" y2="44.45" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="29.21" x2="104.14" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="35.56" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="20.32" x2="95.25" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="SUPPLY5" gate="GND" pin="GND"/>
-<wire x1="95.25" y1="20.32" x2="104.14" y2="20.32" width="0.1524" layer="91"/>
-<junction x="95.25" y="20.32"/>
 </segment>
 </net>
 <net name="/RESET" class="0">
@@ -6125,6 +6113,11 @@ Source: VISHAY wscwsn.pdf</description>
 <wire x1="402.59" y1="207.01" x2="387.35" y2="207.01" width="0.1524" layer="91"/>
 <label x="387.35" y="207.01" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="MCU" gate="G$1" pin="PD2(INT0/PCINT18)"/>
+<wire x1="271.78" y1="180.34" x2="292.1" y2="180.34" width="0.1524" layer="91"/>
+<label x="292.1" y="180.34" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="AGND" class="0">
 <segment>
@@ -6143,6 +6136,16 @@ Source: VISHAY wscwsn.pdf</description>
 <wire x1="208.28" y1="218.44" x2="179.07" y2="218.44" width="0.1524" layer="91"/>
 <label x="179.07" y="218.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="29.21" x2="104.14" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="35.56" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="20.32" x2="104.14" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="20.32" x2="78.74" y2="20.32" width="0.1524" layer="91"/>
+<junction x="86.36" y="20.32"/>
+<label x="78.74" y="20.32" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="HEATER_EN" class="0">
 <segment>
@@ -6152,9 +6155,9 @@ Source: VISHAY wscwsn.pdf</description>
 <label x="62.23" y="233.68" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="MCU" gate="G$1" pin="PC3(ADC3/PCINT11)"/>
-<wire x1="271.78" y1="198.12" x2="308.61" y2="198.12" width="0.1524" layer="91"/>
-<label x="308.61" y="198.12" size="1.778" layer="95" xref="yes"/>
+<wire x1="271.78" y1="185.42" x2="308.61" y2="185.42" width="0.1524" layer="91"/>
+<label x="308.61" y="185.42" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PD0(PCINT16)"/>
 </segment>
 </net>
 <net name="RETURN_GND" class="0">
