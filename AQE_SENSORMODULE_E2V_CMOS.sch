@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5452,7 +5452,6 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="RR" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10 kOhm"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
-<part name="HEATER_VCC" library="SparkFun" deviceset="1.8V" device="" value="HEATER_VCC"/>
 <part name="C3" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="C4" library="wicked-device" deviceset="EEE-1EA100WR" device="" value="10uF"/>
 <part name="U$4" library="ricardo" deviceset="E2V" device=""/>
@@ -5471,7 +5470,6 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="C6" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="R4" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.4MOhm"/>
 <part name="U1" library="SparkFun" deviceset="V_REG_LDO" device="SMD"/>
-<part name="U$1" library="SparkFun" deviceset="1.8V" device="" value="HEATER_VCC"/>
 <part name="R2" library="SparkFun" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R3" library="SparkFun" deviceset="RESISTOR" device="0805-RES"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
@@ -5551,9 +5549,6 @@ Source: VISHAY wscwsn.pdf</description>
 <instance part="RR" gate="G$1" x="201.93" y="251.46" rot="R90"/>
 <instance part="SUPPLY3" gate="GND" x="95.25" y="190.5"/>
 <instance part="P+3" gate="1" x="68.58" y="255.27"/>
-<instance part="HEATER_VCC" gate="G$1" x="123.19" y="254" smashed="yes">
-<attribute name="VALUE" x="122.174" y="257.556" size="1.778" layer="96"/>
-</instance>
 <instance part="C3" gate="G$1" x="68.58" y="208.28" rot="R180"/>
 <instance part="C4" gate="G$1" x="123.19" y="204.47" smashed="yes">
 <attribute name="NAME" x="124.714" y="202.311" size="1.778" layer="95"/>
@@ -5577,9 +5572,6 @@ Source: VISHAY wscwsn.pdf</description>
 <instance part="R4" gate="G$1" x="85.09" y="203.2"/>
 <instance part="U1" gate="G$1" x="100.33" y="222.25" smashed="yes" rot="R270">
 <attribute name="NAME" x="101.6" y="215.646" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="U$1" gate="G$1" x="135.89" y="87.63" smashed="yes">
-<attribute name="VALUE" x="118.364" y="82.296" size="1.778" layer="96"/>
 </instance>
 <instance part="R2" gate="G$1" x="104.14" y="49.53" rot="R90"/>
 <instance part="R3" gate="G$1" x="104.14" y="34.29" rot="R90"/>
@@ -5794,10 +5786,8 @@ Source: VISHAY wscwsn.pdf</description>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="GND1"/>
-<wire x1="208.28" y1="220.98" x2="205.74" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<wire x1="205.74" y1="220.98" x2="204.47" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="204.47" y1="220.98" x2="191.77" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="220.98" x2="191.77" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="191.77" y1="220.98" x2="191.77" y2="210.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5874,18 +5864,16 @@ Source: VISHAY wscwsn.pdf</description>
 <label x="116.84" y="41.91" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<label x="308.61" y="241.3" size="1.778" layer="95" xref="yes"/>
-<pinref part="MCU" gate="G$1" pin="PA0(ADC6/PCINT24)"/>
-<wire x1="308.61" y1="241.3" x2="271.78" y2="241.3" width="0.1524" layer="91"/>
+<label x="275.59" y="182.88" size="1.778" layer="95" xref="yes"/>
+<wire x1="275.59" y1="182.88" x2="271.78" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="MCU" gate="G$1" pin="PD1(PCINT17)"/>
 </segment>
 </net>
 <net name="MAC_IO" class="0">
 <segment>
-<wire x1="275.59" y1="200.66" x2="293.37" y2="200.66" width="0.1524" layer="91"/>
-<label x="293.37" y="200.66" size="1.778" layer="95" xref="yes"/>
-<pinref part="MCU" gate="G$1" pin="PC2(ADC2/PCINT10)"/>
-<wire x1="271.78" y1="200.66" x2="274.32" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="200.66" x2="275.59" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="167.64" x2="292.1" y2="167.64" width="0.1524" layer="91"/>
+<label x="292.1" y="167.64" size="1.778" layer="95" xref="yes"/>
+<pinref part="MCU" gate="G$1" pin="PD7(PCINT23/AIN1)"/>
 </segment>
 <segment>
 <pinref part="MAC" gate="I1" pin="SCIO"/>
@@ -5911,8 +5899,7 @@ Source: VISHAY wscwsn.pdf</description>
 </net>
 <net name="HEATER_VCC" class="0">
 <segment>
-<pinref part="HEATER_VCC" gate="G$1" pin="1.8V"/>
-<wire x1="123.19" y1="254" x2="123.19" y2="247.65" width="0.1524" layer="91"/>
+<wire x1="128.27" y1="247.65" x2="123.19" y2="247.65" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="123.19" y1="247.65" x2="123.19" y2="212.09" width="0.1524" layer="91"/>
 <wire x1="123.19" y1="209.55" x2="123.19" y2="212.09" width="0.1524" layer="91"/>
@@ -5923,17 +5910,22 @@ Source: VISHAY wscwsn.pdf</description>
 <pinref part="U1" gate="G$1" pin="OUT"/>
 <wire x1="105.41" y1="214.63" x2="105.41" y2="212.09" width="0.1524" layer="91"/>
 <wire x1="105.41" y1="212.09" x2="123.19" y2="212.09" width="0.1524" layer="91"/>
+<label x="128.27" y="247.65" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="VHEATER+"/>
-<wire x1="82.55" y1="81.28" x2="135.89" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="135.89" y1="81.28" x2="135.89" y2="87.63" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="1.8V"/>
+<wire x1="82.55" y1="81.28" x2="120.65" y2="81.28" width="0.1524" layer="91"/>
+<label x="120.65" y="81.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="A"/>
 <wire x1="402.59" y1="196.85" x2="387.35" y2="196.85" width="0.1524" layer="91"/>
 <label x="387.35" y="196.85" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MCU" gate="G$1" pin="PA1(ADC7/PCINT25)"/>
+<wire x1="271.78" y1="238.76" x2="293.37" y2="238.76" width="0.1524" layer="91"/>
+<label x="293.37" y="238.76" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SENSOR_VCC" class="0">
