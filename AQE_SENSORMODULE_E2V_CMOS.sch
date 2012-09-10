@@ -5452,9 +5452,9 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="RR" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10 kOhm"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
-<part name="C3" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="C3" library="SparkFun-Passives" deviceset="CAP" device="0805" value="0.1uF"/>
 <part name="C4" library="wicked-device" deviceset="EEE-1EA100WR" device="" value="10uF"/>
-<part name="U$4" library="ricardo" deviceset="E2V" device=""/>
+<part name="GAS" library="ricardo" deviceset="E2V" device=""/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0805-RES"/>
 <part name="U$5" library="SparkFun" deviceset="1.8V" device="" value="SENSOR_VCC"/>
 <part name="J1" library="Connector" deviceset="TWIG_2.0-DIP-FEMALE" device="D" value="440055-4"/>
@@ -5463,11 +5463,11 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="J2" library="SparkFun" deviceset="AVR_SPI_PRG_6" device="NS"/>
 <part name="P+5" library="SparkFun" deviceset="VCC" device=""/>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
-<part name="C5" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="C5" library="SparkFun-Passives" deviceset="CAP" device="0805" value="0.1uF"/>
 <part name="MAC" library="nanode" deviceset="11AA02E48" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="P+6" library="SparkFun" deviceset="VCC" device=""/>
-<part name="C6" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="C6" library="SparkFun-Passives" deviceset="CAP" device="0805" value="0.1uF"/>
 <part name="R4" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.4MOhm"/>
 <part name="U1" library="SparkFun" deviceset="V_REG_LDO" device="SMD"/>
 <part name="R2" library="SparkFun" deviceset="RESISTOR" device="0805-RES"/>
@@ -5475,7 +5475,7 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="P+7" library="SparkFun" deviceset="VCC" device=""/>
 <part name="HEATER_VCC1" library="SparkFun" deviceset="1.8V" device="" value="SENSOR_VCC"/>
-<part name="C8" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="C8" library="SparkFun-Passives" deviceset="CAP" device="0805" value="0.1uF"/>
 <part name="C9" library="wicked-device" deviceset="EEE-1EA100WR" device="" value="10uF"/>
 <part name="R9" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="0Ohm"/>
 <part name="R7" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2.4MOhm"/>
@@ -5486,14 +5486,14 @@ Source: VISHAY wscwsn.pdf</description>
 <part name="INFO" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
 <part name="R10" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="270ohm"/>
 <part name="PWR" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="RED"/>
-<part name="R11" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="470ohm"/>
+<part name="R11" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="270ohm"/>
 <part name="MCU" library="axeio-SparkFun" deviceset="ATTINY48" device="32A"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="P+2" library="SparkFun" deviceset="VCC" device=""/>
-<part name="C1" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
-<part name="R5" library="SparkFun" deviceset="RESISTOR" device="0805-RES"/>
+<part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0805" value="0.1uF"/>
+<part name="R5" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10R"/>
 <part name="U3" library="SparkFun-AnalogIC" deviceset="MCP41XXX" device=""/>
-<part name="C2" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
+<part name="C2" library="SparkFun-Passives" deviceset="CAP" device="0805" value="0.1uF"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="P+9" library="SparkFun" deviceset="VCC" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
@@ -5553,7 +5553,7 @@ Source: VISHAY wscwsn.pdf</description>
 <instance part="C4" gate="G$1" x="123.19" y="204.47" smashed="yes">
 <attribute name="NAME" x="124.714" y="202.311" size="1.778" layer="95"/>
 </instance>
-<instance part="U$4" gate="G$1" x="62.23" y="76.2" rot="R180"/>
+<instance part="GAS" gate="G$1" x="62.23" y="76.2" rot="R180"/>
 <instance part="R1" gate="G$1" x="104.14" y="66.04" rot="R90"/>
 <instance part="U$5" gate="G$1" x="125.73" y="87.63" smashed="yes">
 <attribute name="VALUE" x="106.934" y="87.376" size="1.778" layer="96"/>
@@ -5913,7 +5913,7 @@ Source: VISHAY wscwsn.pdf</description>
 <label x="128.27" y="247.65" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="VHEATER+"/>
+<pinref part="GAS" gate="G$1" pin="VHEATER+"/>
 <wire x1="82.55" y1="81.28" x2="120.65" y2="81.28" width="0.1524" layer="91"/>
 <label x="120.65" y="81.28" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -5930,7 +5930,7 @@ Source: VISHAY wscwsn.pdf</description>
 </net>
 <net name="SENSOR_VCC" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="VSENS+"/>
+<pinref part="GAS" gate="G$1" pin="VSENS+"/>
 <wire x1="82.55" y1="86.36" x2="125.73" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="1.8V"/>
 <wire x1="125.73" y1="86.36" x2="125.73" y2="87.63" width="0.1524" layer="91"/>
@@ -5969,12 +5969,12 @@ Source: VISHAY wscwsn.pdf</description>
 </net>
 <net name="SENSOR" class="0">
 <segment>
-<label x="293.37" y="205.74" size="1.778" layer="95" xref="yes"/>
+<label x="278.13" y="205.74" size="1.778" layer="95" xref="yes"/>
 <pinref part="MCU" gate="G$1" pin="PC0(ADC0/PCINT8)"/>
-<wire x1="293.37" y1="205.74" x2="271.78" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="278.13" y1="205.74" x2="271.78" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="VSENS-"/>
+<pinref part="GAS" gate="G$1" pin="VSENS-"/>
 <wire x1="121.285" y1="76.2" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
 <label x="121.285" y="76.2" size="1.778" layer="95" xref="yes"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -6072,7 +6072,7 @@ Source: VISHAY wscwsn.pdf</description>
 </net>
 <net name="HEATER_FEEDBACK" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="GND_HEATER"/>
+<pinref part="GAS" gate="G$1" pin="GND_HEATER"/>
 <wire x1="82.55" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="71.12" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
@@ -6082,8 +6082,8 @@ Source: VISHAY wscwsn.pdf</description>
 <label x="78.74" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="271.78" y1="203.2" x2="308.61" y2="203.2" width="0.1524" layer="91"/>
-<label x="308.61" y="203.2" size="1.778" layer="95" xref="yes"/>
+<wire x1="271.78" y1="203.2" x2="293.37" y2="203.2" width="0.1524" layer="91"/>
+<label x="293.37" y="203.2" size="1.778" layer="95" xref="yes"/>
 <pinref part="MCU" gate="G$1" pin="PC1(ADC1/PCINT9)"/>
 </segment>
 </net>
