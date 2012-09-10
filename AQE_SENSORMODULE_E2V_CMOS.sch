@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5509,7 +5509,7 @@ Source: VISHAY wscwsn.pdf</description>
 <text x="81.28" y="181.61" size="1.778" layer="91">power regulation for heater</text>
 <text x="228.6" y="158.75" size="1.778" layer="91">microcontroller</text>
 <text x="64.135" y="60.325" size="1.778" layer="91">sensor</text>
-<text x="385.445" y="90.805" size="1.778" layer="91">connector</text>
+<text x="347.345" y="94.615" size="1.778" layer="91">connector</text>
 <wire x1="40.64" y1="266.7" x2="40.64" y2="7.62" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="40.64" y1="7.62" x2="152.4" y2="7.62" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="152.4" y1="7.62" x2="152.4" y2="266.7" width="0.1524" layer="94" style="shortdash"/>
@@ -5558,7 +5558,7 @@ Source: VISHAY wscwsn.pdf</description>
 <instance part="U$5" gate="G$1" x="125.73" y="87.63" smashed="yes">
 <attribute name="VALUE" x="106.934" y="87.376" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="401.32" y="104.14"/>
+<instance part="J1" gate="G$1" x="339.09" y="104.14" rot="R180"/>
 <instance part="P+4" gate="1" x="368.3" y="116.84"/>
 <instance part="R6" gate="G$1" x="95.25" y="247.65"/>
 <instance part="J2" gate="G$1" x="285.75" y="107.95"/>
@@ -5642,10 +5642,10 @@ Source: VISHAY wscwsn.pdf</description>
 <junction x="68.58" y="236.855"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="3"/>
 <pinref part="P+4" gate="1" pin="VCC"/>
-<wire x1="397.51" y1="102.87" x2="368.3" y2="102.87" width="0.1524" layer="91"/>
+<wire x1="342.9" y1="102.87" x2="368.3" y2="102.87" width="0.1524" layer="91"/>
 <wire x1="368.3" y1="102.87" x2="368.3" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
@@ -5836,9 +5836,9 @@ Source: VISHAY wscwsn.pdf</description>
 <pinref part="MCU" gate="G$1" pin="PC4(ADC4/SDA/PCINT12)"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="397.51" y1="105.41" x2="387.35" y2="105.41" width="0.1524" layer="91"/>
-<label x="387.35" y="105.41" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="342.9" y1="105.41" x2="358.14" y2="105.41" width="0.1524" layer="91"/>
+<label x="358.14" y="105.41" size="1.778" layer="95" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -5848,9 +5848,9 @@ Source: VISHAY wscwsn.pdf</description>
 <pinref part="MCU" gate="G$1" pin="PC5(ADC5/SCL/PCINT13)"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="397.51" y1="107.95" x2="394.97" y2="107.95" width="0.1524" layer="91"/>
-<label x="394.97" y="107.95" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="349.25" y="107.95" size="1.778" layer="95" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="4"/>
+<wire x1="349.25" y1="107.95" x2="342.9" y2="107.95" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="/R2_SEL" class="0">
@@ -6154,11 +6154,9 @@ Source: VISHAY wscwsn.pdf</description>
 </net>
 <net name="RETURN_GND" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="397.51" y1="100.33" x2="368.3" y2="100.33" width="0.1524" layer="91"/>
-<wire x1="368.3" y1="100.33" x2="368.3" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="368.3" y1="91.44" x2="365.76" y2="91.44" width="0.1524" layer="91"/>
-<label x="365.76" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="342.9" y1="100.33" x2="347.98" y2="100.33" width="0.1524" layer="91"/>
+<label x="347.98" y="100.33" size="1.778" layer="95" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="P$2"/>
